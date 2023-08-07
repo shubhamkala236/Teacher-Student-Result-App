@@ -1,0 +1,33 @@
+<main id="main" class="d-flex justify-content-end m-3">
+    <div>
+        <button type="button" routerLink="/teacher/createResult" class="btn btn-primary btn-lg border border-dark" >Add Record</button>
+    </div>
+</main>
+
+<h6 class="float-start mx-5">Total {{studentCount}} Students</h6>
+<div class="container table-container d-flex flex-column align-items-center ms-auto flex-md-column">
+
+    <table class="table table-bordered m-2">
+        <thead>
+            <tr>
+                <th scope="col">Roll.No</th>
+                <th scope="col">Name</th>
+                <th scope="col">Date of Birth</th>
+                <th scope="col">Score</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let result of allResults">
+                <td scope="col">{{result.Rollno}}</td>
+                <td scope="col">{{result.Name}}</td>
+                <td scope="col">{{result.Dob}}</td>
+                <td scope="col">{{result.Score}}</td>
+                <td>
+                    <button (click)="editResult(result)"  class="btn btn-primary btn-sm pe-auto me-3 m-auto"><i class="bi bi-pencil"></i></button>
+                    <button (click)="deleteResult(result.id)" class="btn btn-danger btn-sm pe-auto"><i class="bi bi-x"></i></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

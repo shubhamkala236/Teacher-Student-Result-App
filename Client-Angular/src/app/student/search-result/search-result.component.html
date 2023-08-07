@@ -1,0 +1,34 @@
+    <div class="container form-container mt-5 d-flex flex-column align-items-center">
+        <h4>Find Result</h4>
+
+        <form [formGroup]="searchForm" class="d-flex flex-column" (ngSubmit)="formSubmit(searchForm)">
+            <div class="form-group row mb-4">
+                <label for="roll" class="col-sm-2 col-form-label">Roll No.</label>
+                <div class="col-sm-10">
+                    <input type="number" formControlName="roll" name="rollNo" id="roll" class="form-control">
+                    <!-- <div style="color: red;" *ngIf="roll && roll.invalid && roll.touched ">This field is Required</div> -->
+                    <div *ngIf="!roll?.valid && (roll?.dirty || roll?.touched)">
+                        <div *ngIf="roll?.errors?.['required']" style="color: red;">This field is Required.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="name" class="col-sm-2 col-form-label">Name</label>
+                <div class="col-sm-10">
+                    <input type="text" formControlName="name" name="name" id="name" class="form-control">
+                    <div *ngIf="!name?.valid && (name?.dirty || name?.touched)">
+                        <div *ngIf="name?.errors?.['required']" style="color: red;">This field is Required.</div>
+                        <div *ngIf="name?.errors?.['minlength']" style="color: red;">Name should be of atleast 3 Character long.</div>
+                        <div *ngIf="name?.errors?.['pattern']" style="color: red;">Name should contain only alphabets.</div>
+                    </div>
+                </div>
+            </div>
+            <!-- [disabled]="!searchForm.valid" -->
+            <div class="form-group row">
+                <div class="col-sm-10 d-flex justify-content-center mt-4">
+                    <button [disabled]="!searchForm.valid" type="submit" class="btn btn-primary mx-3">Search</button>
+                    <button type="reset" class="btn btn-light mx-3">Clear</button>
+                </div>
+            </div>
+        </form>
+    </div>

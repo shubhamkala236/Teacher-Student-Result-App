@@ -1,0 +1,10 @@
+
+.header-border{
+    border: 2px solid rgb(170, 211, 184);
+}
+
+.btn{
+    border: 1px solid rgb(235, 220, 10);
+    background-color: rgba(255, 255, 0, 0.68);
+    border-radius: 15px;
+}

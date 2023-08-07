@@ -1,0 +1,17 @@
+label{
+    width:5rem;
+}
+
+form{
+    width: 40rem;
+}
+
+button{
+    border: 1px solid grey;
+    border-radius: 10px;
+    width: 9rem;
+}
+
+.btn-light{
+    background-color: rgb(128, 128, 128,0.2);
+}

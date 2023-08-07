@@ -1,0 +1,34 @@
+<div *ngIf="errorMessage" class="alert alert-danger w-100" role="alert">
+    Unable to fetch student's result check rollno and name and try again.
+</div>
+<main class="d-flex m-3">
+    <div class="m-4"><a routerLink="/student/search">Back</a></div>
+</main>
+<div class="container d-flex flex-column align-items-center">
+    <div><h4 class="result m-5">Result</h4></div>
+    
+    <div class="table-container mt-3 ms-0">
+        <table class="table table-borderless">
+            <tbody class="text-start mt-2">
+                <tr> 
+                    <th scope="row">Roll.no :</th>
+                    <td>{{studentResult.Rollno}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Name :</th>
+                    <td>{{studentResult.Name}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Date of Birth :</th>
+                    <td>{{studentResult.Dob}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Score :</th>
+                    <td>{{studentResult.Score}}</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+</div>

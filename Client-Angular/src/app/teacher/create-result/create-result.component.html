@@ -1,0 +1,60 @@
+<div *ngIf="error" class="alert alert-danger w-100" role="alert">
+    An Error Occurred while creating Student Result
+    Student with same RollNo may already exist in database.
+</div>
+<main class="d-flex m-3">
+    <div class="m-4"><a routerLink="/teacher/allResults">Back</a></div>
+</main>
+
+<div class="container form-container">
+    <h4>Add New Result</h4>
+
+    <form [formGroup]="ResultForm" (ngSubmit)="createRecord(ResultForm.value)" class="d-flex flex-column justify-content-around mt-5">
+        <div class="form-group row mb-3">
+            <label class="col-sm-2 col-form-label text-end">Roll.No</label>
+            <div class="col-sm-5 col-md-7">
+                <input type="number" name="rollNo" formControlName="rollno" class="form-control" placeholder="Enter Student Rollno">
+                <div *ngIf="!rollno?.valid && (rollno?.dirty || rollno?.touched)">
+                    <div *ngIf="rollno?.errors?.['required']" style="color: red;">This field is Required.</div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row mb-3">
+            <label class="col-sm-2 col-form-label text-end">Name</label>
+            <div class="col-sm-5 col-md-7">
+                <input type="text" name="name" formControlName="name" class="form-control" placeholder="Enter Student Name">
+                <div *ngIf="!name?.valid && (name?.dirty || name?.touched)">
+                    <div *ngIf="name?.errors?.['required']" style="color: red;">This field is Required.</div>
+                    <div *ngIf="name?.errors?.['minlength']" style="color: red;">Name should be of atleast 3 Character long.</div>
+                    <div *ngIf="name?.errors?.['pattern']" style="color: red;">Name should contain only alphabets.</div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row mb-3">
+            <label class="col-sm-2 col-form-label text-end">Date of Birth</label>
+            <div class="col-sm-5 col-md-7">
+                <input type="date" name="dob" formControlName="dob" class="form-control" placeholder="Enter Student Date Of Birth">
+                <div *ngIf="!dob?.valid && (dob?.dirty || dob?.touched)">
+                    <div *ngIf="dob?.errors?.['required']" style="color: red;">This field is Required.</div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row mb-3">
+            <label class="col-sm-2 col-form-label text-end">Score</label>
+            <div class="col-sm-5 col-md-7">
+                <input type="number" name="score" formControlName="score" class="form-control" placeholder="Enter Student Score">
+                <div *ngIf="!score?.valid && (score?.dirty || score?.touched)">
+                    <div *ngIf="score?.errors?.['required']" style="color: red;">This field is Required.</div>
+                    <div *ngIf="score?.errors?.['maxlength']" style="color: red;">Max length.</div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row mb-3">
+            <div class="d-flex justify-content-center">
+                <button [disabled]="!ResultForm.valid" class="btn btn-primary btn">Submit</button>
+                <button type="reset" class="btn btn-light mx-3">Clear</button>
+            </div>
+        </div>
+
+    </form>
+</div>

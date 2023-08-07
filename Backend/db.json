@@ -1,0 +1,74 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "allResults": [
+    {
+      "id": 1,
+      "Rollno": 1,
+      "Name": "Shubham Kala",
+      "Dob": "1999-12-23",
+      "Score": 500
+    },
+    {
+      "Rollno": 3,
+      "Name": "Rish Kala",
+      "Dob": "2001-12-06",
+      "Score": 499,
+      "id": 2
+    },
+    {
+      "Rollno": 26,
+      "Name": "Milind bhonsale",
+      "Dob": "2000-09-26",
+      "Score": 459,
+      "id": 3
+    },
+    {
+      "Rollno": 29,
+      "Name": "Rahul Dev",
+      "Dob": "2001-12-23",
+      "Score": 420,
+      "id": 4
+    },
+    {
+      "Rollno": 76,
+      "Name": "Rohan",
+      "Dob": "2009-02-21",
+      "Score": 309,
+      "id": 5
+    },
+    {
+      "Rollno": 34,
+      "Name": "Rahul David",
+      "Dob": "2000-02-21",
+      "Score": 283,
+      "id": 6
+    },
+    {
+      "Rollno": 22,
+      "Name": "Ramesh Sharma",
+      "Dob": "2000-12-23",
+      "Score": 289,
+      "id": 9
+    },
+    {
+      "Rollno": 420,
+      "Name": "Dhiru",
+      "Dob": "2001-05-23",
+      "Score": 350,
+      "id": 10
+    }
+  ]
+}

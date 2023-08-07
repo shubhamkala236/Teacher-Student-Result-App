@@ -1,0 +1,54 @@
+# Node.js dependencies
+node_modules/
+
+# Compiled output
+/dist/
+/tmp/
+/out-tsc/
+
+# Logs
+logs/
+*.log
+
+# Dependency lock files
+package-lock.json
+yarn.lock
+
+# IDE and editor specific files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Build artifacts
+*.swp
+
+# End of line marker
+*.DS_Store
+
+
+# Node.js dependencies
+node_modules/
+
+# Dependency lock files
+package-lock.json
+yarn.lock
+
+# Logs
+logs/
+*.log
+
+# Build artifacts
+build/
+
+# Environment variables
+.env
+
+# IDE and editor specific files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# End of line marker
+*.DS_Store
